@@ -1,6 +1,9 @@
-Mantenimiento = ["Activos Funcionando normalmente: ","Funcionando","en mantenimiento"]
+mantenimiento = ["Activos Funcionando normalmente: ","Funcionando","en mantenimiento"]
 
 document.write(Mantenimiento[0])
+
+var mantenimiento = document.getElementById("mantenimiento");
+mantenimiento.style.fontSize = "20px";
 
 
 let pc1 = {
