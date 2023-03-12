@@ -1,3 +1,6 @@
+
+
+
 const stockProductos = [
   {
     id: 1,
@@ -89,6 +92,8 @@ const stockProductos = [
   },
 ];
 let carrito = [];
+
+
 
 const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
