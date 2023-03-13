@@ -150,6 +150,18 @@ if (procesarCompra) {
   });
 }
 
+// Espera a que la página esté completamente cargada
+window.onload = function() {
+  // Crea el Sweet Alert de bienvenida
+  swal({
+    title: "¡Bienvenido!",
+    text: "Gracias por visitar nuestra página.",
+    icon: "success",
+    button: "Continuar"
+  });
+}
+
+
 
 
 
