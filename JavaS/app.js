@@ -1,3 +1,8 @@
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
 
 
 
@@ -142,6 +147,10 @@ if (procesarCompra) {
   });
 }
 
+
+
+
+
 stockProductos.forEach((prod) => {
   const { id, nombre, precio, desc, img, cantidad } = prod;
   if (contenedor) {
@@ -263,6 +272,8 @@ function procesarPedido() {
     0
   );
 }
+
+
 
  function enviarCompra(e){
    e.preventDefault()
