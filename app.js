@@ -112,7 +112,6 @@ const formulario = document.querySelector('#procesar-pago')
 
 
 
-
 if (activarFuncion) {
   activarFuncion.addEventListener('click', procesarPedido);
 }
