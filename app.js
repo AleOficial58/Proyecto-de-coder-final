@@ -276,9 +276,7 @@ function procesarPedido() {
   );
 }
 
-
-
- function enviarCompra(e){
+function enviarCompra(e){
    e.preventDefault()
    const cliente = document.querySelector('#cliente').value
    const email = document.querySelector('#correo').value
