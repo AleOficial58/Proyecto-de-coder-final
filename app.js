@@ -109,6 +109,10 @@ const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 const formulario = document.querySelector('#procesar-pago')
 
+
+
+
+
 if (activarFuncion) {
   activarFuncion.addEventListener('click', procesarPedido);
 }
@@ -232,13 +236,13 @@ const mostrarCarrito = () => {
   guardarStorage();
 };
 
-hola = "Bienvenido al Proyecto de JavaScript para Coderhouse";
+//hola = "Bienvenido al Proyecto de JavaScript para Coderhouse";
 
-alert(hola)
+//alert(hola)
 
-hola2 = "En esta ocacion esta pagina de prueba se incluye (Implementación con uso de JSON y Storage. - Modificación del DOM y detección de eventos de usuario - Codificar funciones de procesos esenciales y notificación de resultados por HTML, añadiendo interacción al simulador -  Ampliar y refinar el flujo de trabajo del script en términos de captura de eventos, procesamiento del simulador y notificación de resultados en forma de salidas por HTML, modificando el DOM - Definir eventos a manejar y su función de respuesta - Modificar el DOM, ya sea para definir elementos al cargar la página o para realizar salidas de un procesamiento - Almacenar datos (clave-valor) en el Storage y recuperarlos)"
+//hola2 = "En esta ocacion esta pagina de prueba se incluye (Implementación con uso de JSON y Storage. - Modificación del DOM y detección de eventos de usuario - Codificar funciones de procesos esenciales y notificación de resultados por HTML, añadiendo interacción al simulador -  Ampliar y refinar el flujo de trabajo del script en términos de captura de eventos, procesamiento del simulador y notificación de resultados en forma de salidas por HTML, modificando el DOM - Definir eventos a manejar y su función de respuesta - Modificar el DOM, ya sea para definir elementos al cargar la página o para realizar salidas de un procesamiento - Almacenar datos (clave-valor) en el Storage y recuperarlos)"
 
-alert(hola2)
+//alert(hola2)
 
 function guardarStorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
