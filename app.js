@@ -153,14 +153,13 @@ if (procesarCompra) {
 // Espera a que la página esté completamente cargada
 window.onload = function() {
   // Crea el Sweet Alert de bienvenida
-  swal({
-    title: "¡Bienvenido!",
+  Swal.fire({
+    title: "¡Bienvenido! a la pagina oficial del proyecto de JavaScript",
     text: "Gracias por visitar nuestra página.",
     icon: "success",
     button: "Continuar"
-  });
+  });
 }
-
 
 
 
@@ -194,7 +193,7 @@ const agregarProducto = (id) => {
         prod.cantidad++
       }
     })
-  } else {
+  } else  { 
     const item = stockProductos.find((prod) => prod.id === id)
     carrito.push(item)
   }
