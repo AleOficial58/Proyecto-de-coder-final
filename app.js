@@ -5,7 +5,6 @@ fetch('https://api.example.com/data')
 
 
 
-
 const stockProductos = [
   {
     id: 1,
