@@ -176,7 +176,7 @@ stockProductos.forEach((prod) => {
       <p class="card-text">Precio: ${precio}</p>
       <p class="card-text">Descripcion: ${desc}</p>
       <p class="card-text">Cantidad: ${cantidad}</p>
-      <button class="java2ok" onclick="agregarProducto(${id})">Comprar Producto</button>
+      <button class="java2ok" onclick="agregarProducto(${id}) ">Comprar Producto</button>
     </div>
   </div>
     `;
@@ -184,19 +184,26 @@ stockProductos.forEach((prod) => {
 });
 
 
-const agregarProducto = (id) => {
+const agregarProducto = (id) => { 
   const existe = carrito.some(prod => prod.id === id)
 
-  if(existe){
+  if(existe) {
+    
     const prod = carrito.map(prod => {
       if(prod.id === id){
         prod.cantidad++
       }
+      
     })
   } else  { 
     const item = stockProductos.find((prod) => prod.id === id)
     carrito.push(item)
-  }
+  } Swal.fire(
+    'Muy Bien!',
+    'Tu producto fue agregado exitosamente!',
+    'success'
+  )
+    
   mostrarCarrito()
 
 };
@@ -217,11 +224,9 @@ const mostrarCarrito = () => {
         <p>Producto: ${nombre}</p>
       <p>Precio: ${precio}</p>
       <p>Cantidad :${cantidad}</p>
-      <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
+      <button class="btn btn-danger" onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
       </div>
-      
-  
       `;
     });
   }
