@@ -2,7 +2,7 @@
     max-width:100%;
 }
 
-a{
+a, a label{
     cursor:pointer;
 }
 .alerta{

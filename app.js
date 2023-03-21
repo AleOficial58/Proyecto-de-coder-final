@@ -103,17 +103,12 @@ const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
 const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
-const activarFuncion = document.querySelector("#activarFuncion");
 const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 const formulario = document.querySelector('#procesar-pago')
 
 
 
-
-if (activarFuncion) {
-  activarFuncion.addEventListener('click', procesarPedido);
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -144,13 +139,14 @@ if (procesarCompra) {
         confirmButtonText: "Aceptar",
       });
     } else {
-      location.href = "compra.html";
+      console.log("ASD")
+      //location.href = "compra.html";
+      enviarCompra
     }
   });
 }
-
 // Espera a que la página esté completamente cargada
-window.onload = function() {
+const bienvenida = () => {
   // Crea el Sweet Alert de bienvenida
   Swal.fire({
     title: "¡Bienvenido! a la pagina oficial del proyecto de JavaScript",
@@ -213,7 +209,7 @@ const mostrarCarrito = () => {
     modalBody.innerHTML = "";
     carrito.forEach((prod) => {
       const { id, nombre, precio, desc, img, cantidad } = prod;
-      console.log(modalBody);
+      //console.log(modalBody);
       modalBody.innerHTML += `
       <div class="modal-contenedor">
         <div>
@@ -311,19 +307,19 @@ function enviarCompra(e){
 //  .addEventListener('submit', function(event) {
 //    event.preventDefault();
 
-   btn.value = 'Enviando...';
+   //btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
    const templateID = 'template_qxwi0jn';
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Finalizar compra';
-      alert('Correo enviado!');
-    }, (err) => {
-      btn.value = 'Finalizar compra';
-      alert(JSON.stringify(err));
-    });
+  //  emailjs.sendForm(serviceID, templateID, this)
+  //   .then(() => {
+  //     btn.value = 'Finalizar compra';
+  //     alert('Correo enviado!');
+  //   }, (err) => {
+  //     btn.value = 'Finalizar compra';
+  //     alert(JSON.stringify(err));
+  //   });
     
    const spinner = document.querySelector('#spinner')
    spinner.classList.add('d-flex')
@@ -338,7 +334,8 @@ function enviarCompra(e){
      alertExito.classList.add('alert', 'alerta', 'd-block', 'text-center', 'col-12', 'mt-2', 'alert-success')
      alertExito.textContent = 'Compra realizada correctamente'
      formulario.appendChild(alertExito)
-
+      carrito = []
+      location.href = "compra.html"
      setTimeout(() => {
        alertExito.remove()
      }, 3000)
