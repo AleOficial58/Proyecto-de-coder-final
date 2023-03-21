@@ -9,11 +9,11 @@ async function pruebaAPI(url){
     
 if (response.ok) { // response.ok == true
      //get the response body (the method explained below)
-     debugger //ACOSTRUMBRATE A DEBUGGUEAR
+     debugger 
      await response.json()
      .then(resp => {
          // console.log(resp)
-         if(resp != undefined && resp.country.length > 0){ //OJO CON ESTO, SI NO LO SABES SACALO
+         if(resp != undefined && resp.country.length > 0){ 
             // console.log(resp.country)
              resp.country.forEach(element => {
                  console.log(element)

@@ -99,21 +99,20 @@ let carrito = [];
 
 
 
-const contenedor = document.querySelector("#contenedor");
-const carritoContenedor = document.querySelector("#carritoContenedor");
-const vaciarCarrito = document.querySelector("#vaciarCarrito");
-const precioTotal = document.querySelector("#precioTotal");
-const procesarCompra = document.querySelector("#procesarCompra");
-const totalProceso = document.querySelector("#totalProceso");
-const formulario = document.querySelector('#procesar-pago');
-const activarFuncion = document.querySelector('activarfuncion');
+const contenedor = document.querySelector("#contenedor")
+const carritoContenedor = document.querySelector("#carritoContenedor")
+const vaciarCarrito = document.querySelector("#vaciarCarrito")
+const precioTotal = document.querySelector("#precioTotal")
+const procesarCompra = document.querySelector("#procesarCompra")
+const totalProceso = document.querySelector("#totalProceso")
+const formulario = document.querySelector('#procesar-pago')
+const activarFuncion = document.querySelector('#activarFuncion')
 
-if(activarFuncion === true ){
-  activarFuncion.addEventListener('click', procesarPedido)
+if (activarFuncion === true ){
+  activarFuncion.addEventListener('click', function() {
+    console.log ('se hizo click en el boton');
+  });
 }
-
-
-
 
 
 
@@ -301,33 +300,39 @@ function enviarCompra(e){
 
    if(email === '' || cliente == ''){
      Swal.fire({
-       title: "¡Debes completar tu email y nombre!",
-       text: "Rellena el formulario",
+       title: "¡Tienes que agregar un producto para comprar!",
+       text: "Vuelve a intentarlo, por favor.",
        icon: "error",
        confirmButtonText: "Aceptar",
    })
  } else {
 
+/*--------------BORRAR----------------*/
+
   const btn = document.getElementById('button');
 
-// document.getElementById('procesar-pago')
-//  .addEventListener('submit', function(event) {
-//    event.preventDefault();
+ //document.getElementById('procesar-pago')
+  //.addEventListener('submit', function(event) {
+    //event.preventDefault();
 
-   //btn.value = 'Enviando...';
+   /*btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
    const templateID = 'template_qxwi0jn';
 
-  //  emailjs.sendForm(serviceID, templateID, this)
-  //   .then(() => {
-  //     btn.value = 'Finalizar compra';
-  //     alert('Correo enviado!');
-  //   }, (err) => {
-  //     btn.value = 'Finalizar compra';
-  //     alert(JSON.stringify(err));
-  //   });
+    //emailjs.sendForm(serviceID, templateID, this)
+     //.then(() => {
+       btn.value = 'Finalizar compra';
+       alert('Correo enviado!');
+     }, (err) => {
+       btn.value = 'Finalizar compra';
+       alert(JSON.stringify(err));
+     });*/
     
+
+  /*--------------BORRAR----------------*/
+
+
    const spinner = document.querySelector('#spinner')
    spinner.classList.add('d-flex')
    spinner.classList.remove('d-none')
