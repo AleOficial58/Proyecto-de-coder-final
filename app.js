@@ -105,7 +105,15 @@ const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
 const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
-const formulario = document.querySelector('#procesar-pago')
+const formulario = document.querySelector('#procesar-pago');
+const activarFuncion = document.querySelector('activarfuncion');
+
+if(activarFuncion === true ){
+  activarFuncion.addEventListener('click', procesarPedido)
+}
+
+
+
 
 
 
@@ -139,11 +147,10 @@ if (procesarCompra) {
         confirmButtonText: "Aceptar",
       });
     } else {
-      console.log("ASD")
-      //location.href = "compra.html";
-      enviarCompra
+          location.href = "compra.html"
     }
   });
+  
 }
 // Espera a que la página esté completamente cargada
 const bienvenida = () => {
