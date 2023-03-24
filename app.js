@@ -273,14 +273,11 @@ function procesarPedido() {
    const cliente = document.querySelector('#cliente').value
    const email = document.querySelector('#correo').value
 
-   if(email === '' || cliente == ''){
-     Swal.fire({
-      title: "¡Revisa bien antes de completar!",
-      text: "Vuelve a intentarlo, por favor.",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-   })
- } else {
+   //IF//
+
+
+  if(email != "" && cliente != "" )
+ {
 
   const btn = document.getElementById('button');
 
@@ -313,9 +310,7 @@ function procesarPedido() {
        text: JSON.stringify(err),
        icon: 'error',
        confirmButtonText: 'Aceptar'
-     }).then(() => {
-         window.location.href = "index.html";
-     });
+     })
    })
 
  
@@ -344,7 +339,15 @@ function procesarPedido() {
 
 
    }, 3000)
+   localStorage.clear()
+ } 
+ else {
+  Swal.fire({
+    title: "¡Revisa bien antes de completar!",
+    text: "Vuelve a intentarlo, por favor.",
+    icon: "error",
+    confirmButtonText: "Aceptar",
+ })
  }
- localStorage.clear()
 
  }
