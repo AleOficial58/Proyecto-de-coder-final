@@ -276,7 +276,7 @@ function procesarPedido() {
    //IF//
 
 
-  if(email != "" && cliente != "" )
+  if((email !== undefined && email !== "") && (cliente !== undefined && cliente !== ""))
  {
 
   const btn = document.getElementById('button');
@@ -313,7 +313,6 @@ function procesarPedido() {
      })
    })
 
- 
  
   
    
